@@ -26,7 +26,7 @@ app.use(cors(corsOptions));
 const PORT = process.env.PORT || 3000;
 
 app.use((req, res, next) => {
-    console.log(req.url);
+    console.log(req.url, req.cookies.token);
     next();
 });
 
